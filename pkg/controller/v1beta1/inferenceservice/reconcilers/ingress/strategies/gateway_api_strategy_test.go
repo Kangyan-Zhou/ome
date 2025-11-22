@@ -335,7 +335,7 @@ func TestGatewayAPIStrategy_GetRawServiceHost(t *testing.T) {
 		{
 			name:         "without router",
 			isvc:         createTestInferenceServiceGateway("test-isvc", "default"),
-			expectedHost: "test-isvc.default.svc.cluster.local",
+			expectedHost: "test-isvc-engine.default.svc.cluster.local",
 		},
 	}
 

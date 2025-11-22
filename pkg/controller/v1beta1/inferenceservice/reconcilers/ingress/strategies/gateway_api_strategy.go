@@ -222,7 +222,7 @@ func (g *GatewayAPIStrategy) getRawServiceHost(isvc *v1beta1.InferenceService) s
 		routerName := isvc.Name + "-router" // Actual router service name
 		return routerName + "." + isvc.Namespace + ".svc.cluster.local"
 	}
-	engineName := isvc.Name // Actual engine service name
+	engineName := isvc.Name + "-engine" // Actual engine service name
 	return engineName + "." + isvc.Namespace + ".svc.cluster.local"
 }
 

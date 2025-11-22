@@ -136,7 +136,7 @@ func (k *KubernetesIngressStrategy) getRawServiceHost(isvc *v1beta1.InferenceSer
 		routerName := isvc.Name + "-router"
 		return routerName + "." + isvc.Namespace + ".svc.cluster.local"
 	}
-	engineName := isvc.Name
+	engineName := isvc.Name + "-engine"
 	return engineName + "." + isvc.Namespace + ".svc.cluster.local"
 }
 

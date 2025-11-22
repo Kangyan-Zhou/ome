@@ -250,7 +250,7 @@ func TestKubernetesIngressStrategy_GetRawServiceHost(t *testing.T) {
 		{
 			name:         "without router",
 			isvc:         createTestInferenceServiceRaw("test-isvc", "default"),
-			expectedHost: "test-isvc.default.svc.cluster.local",
+			expectedHost: "test-isvc-engine.default.svc.cluster.local",
 		},
 	}
 
